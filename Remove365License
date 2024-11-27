@@ -1,0 +1,9 @@
+#connect to MS Graph
+Connect-Graph -Scopes User.ReadWrite.All, Organization.Read.All
+
+#identify SKUID as pictured below
+get-mguserlicensedetail -userid "[email address]"
+
+#remove the license based on the license SKUID
+#always be sure to confirm the mailbox has been CONVERTED TO SHARED prior to removing a license that will generate a mailbox
+set-mguserlicense -userid "[email address]" -RemoveLicenses @("[SKUID]") -AddLicenses @{}
