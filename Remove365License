@@ -1,7 +1,7 @@
 # connect to MS Graph
 Connect-Graph -Scopes User.ReadWrite.All, Organization.Read.All
 
-# identify SKUID as pictured below
+# identify SKUID
 get-mguserlicensedetail -userid "[email address]"
 
 # remove the license based on the license SKUID
